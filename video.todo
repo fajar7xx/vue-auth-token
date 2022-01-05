@@ -1,0 +1,36 @@
+the video:
+    ✔ video 1 @done(22-01-04 23:24)
+    ✔ video 2 @done(22-01-05 00:03)
+    ✔ video 3 registration @done(22-01-05 19:37)
+    ✔ video 4 login @done(22-01-05 22:08)
+    ✔ video 5 logout @done(22-01-05 22:43)
+    ☐ video 6 handling error
+    ☐ video 7 automatic login
+
+
+    jika ada masalah pada node-sas bisa lakukan ini
+    npm i -D sass sass-loader@7 instead of npm i -D node-sass
+
+flow:
+    ✔ register @done(22-01-05 22:21)
+    ✔ login @done(22-01-05 22:21)
+    ☐ access protected data like dashboard
+    ☐ vuex
+        ☐ store userData in State
+        ☐ store userData in local storage
+        ☐ add token to Axios header
+    ☐ logout
+        ☐ clear userData from state
+        ☐ clear userData from local storage
+        ☐ remove token from axion header
+
+    
+referensi:
+    ☐ https://www.ictshore.com/javascript/vuex-modules-tutorial/
+    ☐ https://medium.com/swlh/adding-modules-to-a-vuex-store-8afead95e5af
+    ☐ https://garywoodfine.com/how-to-split-vuex-store-into-modules/
+    ☐ https://stackoverflow.com/questions/60991631/unknow-action-type-error-using-vuex-store
+    ☐ https://medium.com/@arliber/vuex-next-steps-namespaces-and-dynamic-modules-92ea23a0ee9a
+
+keyword:
+    ☐ navigation guard for vue
