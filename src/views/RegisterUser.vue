@@ -31,6 +31,13 @@
       <button type="submit" name="button">
         Register Now
       </button>
+
+      <ul>
+        <li v-for="(error, index) in errors" :key="index">
+          {{ error }}
+        </li>
+      </ul>
+
       <router-link :to="{name: 'login'}">
         Already have an account? Login.
       </router-link>
@@ -47,7 +54,8 @@ export default {
         name: '',
         email: '',
         password: ''
-      }
+      },
+      errors: null
     }
   },
   methods: {
@@ -56,6 +64,9 @@ export default {
       this.$store.dispatch('auth/register', this.registerForm)
         .then(() => {
           this.$router.push({ name: 'dashboard' })
+        })
+        .catch(err => {
+          this.errors = err.response.data.errors
         })
     }
   }

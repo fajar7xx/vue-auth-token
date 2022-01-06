@@ -22,6 +22,9 @@
       <button type="submit" name="button">
         Register Now
       </button>
+
+      <p>{{ error }}</p>
+
       <router-link :to="{name: 'register'}">
         Don't have an account? Register.
       </router-link>
@@ -36,7 +39,8 @@ export default {
       loginForm: {
         email: '',
         password: ''
-      }
+      },
+      error: null
     }
   },
   methods: {
@@ -45,6 +49,10 @@ export default {
         .dispatch('auth/login', this.loginForm)
         .then(() => {
           this.$router.push({ name: 'dashboard' })
+        })
+        .catch(err => {
+          // console.log(err.response)
+          this.error = err.response.data.error
         })
     }
   }
